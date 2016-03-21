@@ -1,6 +1,6 @@
 # Varnish Cache Test Wrapper
 
-Sometimes, it may be useful to be able to see how a Varnish Cache modifies the
+Sometimes, it may be useful to be able to see how Varnish Cache modifies the
 traffic that passes through it.
 
 This Vagrant environment allows creation of a Varnish Cache test environment,
