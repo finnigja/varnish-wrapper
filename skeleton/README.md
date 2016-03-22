@@ -1,4 +1,4 @@
-For Varnish and Hitch, we reuse init files from Ubuntu Xenial packaging:
- - http://packages.ubuntu.com/xenial/varnish
- - http://packages.ubuntu.com/xenial/hitch
+For Varnish and Hitch, we reuse init files from Debian Testing packages:
+ - https://packages.debian.org/stretch/varnish
+ - https://packages.debian.org/stretch/hitch
 
