@@ -20,6 +20,7 @@ cache or proxy component, if a different target needs to be tested.
 
 Tested with VirtualBox 5.0 and Vagrant 1.7.4.
 
+![screenshot](https://raw.githubusercontent.com/chair6/varnish-wrapper/master/screenshot.png)
 
 ## Standard Install
 
