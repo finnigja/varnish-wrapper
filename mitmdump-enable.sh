@@ -6,5 +6,3 @@ sudo sed -i -e 's/VARNISH_LISTEN_PORT\=[[:digit:]]\+$/VARNISH_LISTEN_PORT\=8081/
 sudo sed -i -e 's/\.port \= \"[[:digit:]]\+"\;$/.port \= \"8082\"\;/g' /etc/varnish/default.vcl
 sudo service varnish restart
 
-#setup screen sessions
-screen -c mitmdump.screenrc
