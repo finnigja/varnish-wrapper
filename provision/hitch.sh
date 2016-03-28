@@ -5,7 +5,7 @@ cd hitch
 ./bootstrap
 ./configure --prefix=/opt/hitch && make && sudo make install
 cd
-sudo cp -rv /vagrant/skeleton/hitch/* /
+sudo cp -rv /vagrant/provision/skeleton/hitch/* /
 sudo addgroup --system hitch
 sudo adduser --system --disabled-login --no-create-home --ingroup hitch hitch
 cd /etc/hitch/certs

@@ -5,7 +5,7 @@ cd varnish-cache
 ./autogen.sh
 ./configure --prefix=/opt/varnish && make && sudo make install
 cd
-sudo cp -rv /vagrant/skeleton/varnish/* /
+sudo cp -rv /vagrant/provision/skeleton/varnish/* /
 sudo addgroup --system varnish
 sudo adduser --system --disabled-login --no-create-home --ingroup varnish varnish
 sudo adduser --system --disabled-login --no-create-home --ingroup varnish vcache
