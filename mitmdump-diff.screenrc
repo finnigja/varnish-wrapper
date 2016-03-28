@@ -1,7 +1,7 @@
-screen -t precache sudo mitmdump -p 80 -R http://localhost:8081 -s "mitmdump-logger.py precache"
+screen -t precache sudo mitmdump -p 80 -R http://localhost:8081 --host -s "mitmdump-logger.py precache"
 split
 focus down
-screen -t postcache sudo mitmdump -p 8082 -R http://localhost:8080 -s "mitmdump-logger.py postcache"
+screen -t postcache sudo mitmdump -p 8082 -R http://localhost:8080 --host -s "mitmdump-logger.py postcache"
 split
 focus down
 screen -t logger bash
