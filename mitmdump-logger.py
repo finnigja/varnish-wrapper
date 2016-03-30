@@ -2,8 +2,16 @@ from libmproxy.script import concurrent
 import sqlite3
 import uuid
 
-# logs requests passing through mitmproxy into sqlite; tag requests with
-# x-mitm-uuid header, to allow correlation if recurring
+# mitm-logger.py - an inline script for mitmproxy
+#
+# Logs request/response pairs passing through mitmproxy into SQLite.
+# Tag requests with x-mitm-uuid / x-mitm-time headers, to allow correlation
+# if recurring.
+#
+# TODO: rework header tagging, likely only need one
+# TODO: optionally restrict logging of response content per content-type
+#
+# Reference: http://docs.mitmproxy.org/en/stable/scripting/inlinescripts.html
 
 
 def start(context, argv):
