@@ -61,7 +61,7 @@ using mitmproxy running in reverse proxy mode:
 
 Running mitm-enable.sh will reconfigure Varnish in this mode.
 
-Running 'screen -c mitmdump-monitor.screenrc' will start a screen session,
+Running 'screen -c wrapper-monitor.screenrc' will start a screen session,
 with mitmdump processes at both pre-cache and post-cache positions in the
 flow.
 
@@ -80,15 +80,15 @@ reconfigure Varnish to return the flow to original state.
 
 ## MITM Diff Mode
 
-Running 'screen -c mitmdump-diff.screenrc' will start a screen session, with
+Running 'screen -c wrapper-diff.screenrc' will start a screen session, with
 mitmdump processes at both pre-cache and post-cache positions.  It will also
 enable an mitmproxy script (mitmdump-logger.py) that uses header injection to
-tie pre-/post-cache requests to each other, and persist the requests in an
-SQLite database.
+tie pre-/post-cache requests to each other, and persist the requests/responses
+in an SQLite database.
 
-TBD: add tool/view for viewing collected requests and comparing differences
-between pre-/post-cache.
-
+Running analyze-flows.py will perform some basic analysis against the request/
+response pairs in the SQLite database and indicate where differences are
+identified.
 
 ## Logging
 
