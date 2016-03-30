@@ -4,4 +4,9 @@ focus down
 screen -t postcache sudo mitmdump -p 8082 -R http://localhost:8080 --host -s "mitmdump-logger.py postcache"
 split
 focus down
-screen -t logger bash
+screen -t differ bash -c 'while true; do sleep 5; python ~/varnish-wrapper/analyze-flows.py; done'
+focus top
+resize 10
+focus down
+resize 10
+focus down
