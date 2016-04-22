@@ -1,7 +1,7 @@
-screen -t precache sudo mitmdump -p 80 -R http://localhost:8081 --host -s "mitmdump-logger.py precache"
+screen -t precache sudo mitmdump -p 80 -R http://localhost:8081 --host -s "mitmdump-logger.py precache" --no-http2
 split
 focus down
-screen -t postcache sudo mitmdump -p 8082 -R http://localhost:8080 --host -s "mitmdump-logger.py postcache"
+screen -t postcache sudo mitmdump -p 8082 -R http://localhost:8080 --host -s "mitmdump-logger.py postcache" --no-http2
 split
 focus down
 screen -t differ bash -c 'while true; do sleep 5; python ~/varnish-wrapper/analyze-flows.py; done'

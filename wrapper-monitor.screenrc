@@ -1,4 +1,4 @@
-screen -t precache sudo mitmdump -p 80 -R http://localhost:8081 -d
+screen -t precache sudo mitmdump -p 80 -R http://localhost:8081 -d --no-http2
 split
 focus down
-screen -t postcache sudo mitmdump -p 8082 -R http://localhost:8080 -d
+screen -t postcache sudo mitmdump -p 8082 -R http://localhost:8080 -d --no-http2

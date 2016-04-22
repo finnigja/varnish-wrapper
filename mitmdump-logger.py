@@ -1,4 +1,4 @@
-from libmproxy.script import concurrent
+from mitmproxy.script import concurrent
 import sqlite3
 import uuid
 
